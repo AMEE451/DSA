@@ -1,11 +1,12 @@
 
-let arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+let arr = [1, -1, 5, -2, 3]
+let k = 3
 const SumOfArr = (arr) => {
     let sum = 0;
     for (let i = 0; i < arr.length; i++) {
         sum += arr[i]
     }
-    return sum 
+    return sum
 }
 
 let max = 0;
@@ -15,8 +16,13 @@ for (let i = 0; i < arr.length; i++) {
     for (let j = i; j < arr.length; j++) {
         subarr.push(arr[j])
         let currsum = SumOfArr(subarr)
-        if (currsum > max) {
-            max = currsum;
+
+        if (currsum == k) {
+            let currlen = subarr.length
+            if (currlen > max) {
+                max = currlen;
+                console.log(subarr);
+            }
         }
     }
 }

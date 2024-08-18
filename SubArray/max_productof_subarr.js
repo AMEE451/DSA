@@ -1,13 +1,11 @@
 let arr = [1, 4, 3, 5]
-let mul = 1;
 const SumOfArr = (arr) => {
-    
+    let mul = 1;
     for (let i = 0; i < arr.length; i++) {
         mul *= arr[i]
     }
     return mul 
 }
-console.log(SumOfArr(arr));
 
 let max = 0;
 for (let i = 0; i < arr.length; i++) {
